@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 30px;
+            font-size: 15px;
+            text-align: center;
+            font-stretch: expanded;
+        }
+
+        section {
+            background-color: rgb(34, 33, 33);
+            color: white;
+            padding: 20px;
+        }
+
+
+        .title h1 {
+            font-family: fantasy;
+            font-variant: small-caps;
+            font-size: 50px;
+            font-weight: 200;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #555;
+        }
+
+        .clan-info {
+            margin-top: 20px;
+        }
+
+        .clan-info h2 {
+            font-size: 20px;
+        }
+
+        .clan-info p {
+            font-size: 16px;
+        }
+
+        /* Hide all sections by default */
+        main section {
+            display: none;
+        }
+
+        /* Show the selected section */
+        main section.active {
+            display: block;
+        }
+        
+        .war-bases {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Welcome Clasher</h1>
+            <h4>Clash Coffin</h4>
+            <p>Welcome to the page of our clan</p>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#" class="btn" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" class="btn" onclick="showSection('more')">More</a></li>
+                <li><a href="#" class="btn" onclick="showSection('find')">Find Player</a></li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <section id="home" class="active">
+            <div class="clan-info">
+                <h3>About our clan</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sapiente voluptas quibusdam mollitia, odit dolore fugiat autem saepe. Corporis atque exercitationem, repellendus dicta tempore totam est cupiditate quaerat perspiciatis, esse unde ratione, neque autem labore. Mollitia ratione corrupti ducimus, eius voluptas minima quis exercitationem optio sit minus laborum vel cum distinctio. Aliquid inventore voluptatibus delectus labore! Porro dicta ipsum quis nisi hic earum, inventore quasi animi adipisci. Nam soluta vero quod tenetur voluptatum perferendis doloremque perspiciatis blanditiis, ratione ut ipsum! Veniam qui laudantium magni dolorem itaque est, aperiam eligendi nobis provident obcaecati dolor magnam iusto explicabo tempora laborum cum dignissimos.</p>
+                <br>
+                <div>
+                    <h3>Why to join our clan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio vero quia veniam, tempore repellendus, illo voluptas ad possimus ipsa aliquid, doloremque nihil eveniet autem dolorum? Illum ipsam enim veniam, repellendus praesentium veritatis, incidunt quia ab voluptates perspiciatis molestiae quae impedit! Impedit, et. Accusamus, ullam. Quo dolorem, voluptatum expedita consequatur labore earum ex ipsam adipisci, autem perspiciatis magnam distinctio est possimus voluptate rerum dignissimos. Eveniet adipisci numquam vel explicabo doloribus odit aut fugiat deserunt! Omnis facilis fugit quia tempore labore, molestiae autem, odio suscipit dolore, necessitatibus sequi velit. Temporibus nulla consectetur beatae harum expedita sequi provident!</p>
+                </div>
+                
+                    
+            </div>
+        </section>
+        <section id="more">
+            <h3>About Co-leaders</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>League</th>
+                    <th>Title</th>
+                </tr>
+                <tr>
+                    <td>Dragon</td>
+                    <td>Titan</td>
+                    <td>CEO of the clan</td>
+                </tr>
+                <tr>
+                    <td>Majio</td>
+                    <td>Crystal</td>
+                    <td>Team manager</td>
+                </tr>
+                <tr>
+                    <td>lu_xury</td>
+                    <td>Crystal</td>
+                    <td>Talk-active</td>
+                </tr>
+            </table>
+            <br>
+            <area class="war-bases">
+                    <h3>War Bases</h3>
+                    <p>Clash of clans is the game of the patience and strategies where base design plays an important role in the Clan war or Clan War League(CWL). You can find out the base designs by <a href="https://clashofclans-layouts.com/">Click here</a></p>
+                
+            </area>
+        </section>
+        <section id="find" class="search-player">
+            <form action="find">
+                <label for="player">
+                    positions <select name="Select the position" id="A1">
+                        <option value="not-member">Not a member</option>
+                        <option value="member">Member</option>
+                        <option value="elder">Elder</option>
+                        <option value="co-leader">Co-leader</option>
+                    </select>
+                </label>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('main section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
